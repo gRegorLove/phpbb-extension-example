@@ -1,0 +1,10 @@
+services:
+    mapp.example.cron.task.sample:
+        class: mapp\example\cron\task\sample
+        arguments:
+            - '@config'
+            - '@log'
+        calls:
+            - [set_name, [mapp.example.cron.task.sample]]
+        tags:
+            - { name: cron.task }

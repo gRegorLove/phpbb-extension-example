@@ -1,0 +1,27 @@
+{
+    "name": "mapp/example",
+    "type": "phpbb-extension",
+    "description": "",
+    "homepage": "",
+    "version": "1.0.0-dev",
+    "time": "2020-08-24",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Gregor Morrill",
+            "email": "",
+            "homepage": "https://stevens-stevens.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "display-name": "MAPP Example",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.0,<3.4.0@dev"
+        }
+    }
+}
