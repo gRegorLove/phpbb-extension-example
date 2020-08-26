@@ -36,7 +36,7 @@ class sample extends \phpbb\cron\task\base
 	{
 		$this->config = $config;
 		$this->log = $log;
-		// $this->log->add('admin', 2, '127.0.0.1', 'sample.construct');
+		$this->log->add('admin', 2, '127.0.0.1', 'sample.construct');
 	}
 
 	/**
@@ -51,7 +51,7 @@ class sample extends \phpbb\cron\task\base
 
 		// Update the cron task run time here if it hasn't
 		// already been done by your cron actions.
-		$this->config->set('example_cron_last_run', time(), false);
+		$this->config->set('example_cron_last_run', time(), true);
 	}
 
 	/**
@@ -77,6 +77,7 @@ class sample extends \phpbb\cron\task\base
 	public function should_run()
 	{
 		$this->log->add('admin', 2, '127.0.0.1', 'sample.should_run');
-		return $this->config['example_cron_last_run'] < time() - $this->cron_frequency;
+		return true;
+		#return $this->config['example_cron_last_run'] < time() - $this->cron_frequency;
 	}
 }
