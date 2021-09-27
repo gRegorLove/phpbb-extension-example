@@ -77,7 +77,6 @@ class sample extends \phpbb\cron\task\base
 	public function should_run()
 	{
 		$this->log->add('admin', 2, '127.0.0.1', 'sample.should_run');
-		return true;
-		#return $this->config['example_cron_last_run'] < time() - $this->cron_frequency;
+		return $this->config['example_cron_last_run'] < (time() - $this->cron_frequency);
 	}
 }

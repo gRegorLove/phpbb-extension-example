@@ -5,6 +5,6 @@ services:
             - '@config'
             - '@log'
         calls:
-            - [set_name, [mapp.example.cron.task.sample]]
+            - [set_name, [cron.task.mapp.example.sample]]
         tags:
             - { name: cron.task }
